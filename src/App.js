@@ -1,9 +1,12 @@
 import './index.css';
+import NavBar from './components/NavBar.jsx'
+import Home from './components/Home.jsx'
 
 function App() {
   return (
     <div>
-      <h1 className="text-7xl font-bold font-signature" >YoOOOO</h1>
+      <NavBar />
+
     </div>
   );
 }
