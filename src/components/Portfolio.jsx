@@ -5,6 +5,7 @@ import reactParallax from "../assets/portfolio/reactParallax.jpg";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import react_travel_journal from "../assets/portfolio/react_travel_journal.png";
+import meme_generator from "../assets/portfolio/meme_generator.png";
 
 const Portfolio = () => {
     const portfolios = [
@@ -13,11 +14,13 @@ const Portfolio = () => {
         src: react_travel_journal,
         demo: "https://dapper-bunny-6101ca.netlify.app/",
         code: "https://github.com/MontyWilliams/travel_journal",
+      },
+      {
+        id: 2,
+        src: meme_generator,
+        demo: "https://master--vocal-choux-76ae84.netlify.app/"
+        code: "https://github.com/MontyWilliams/portfolio_Z"
       }
-      // {
-      //   id: 2,
-      //   src: reactParallax,
-      // },
       // {
       //   id: 3,
       //   src: navbar,
