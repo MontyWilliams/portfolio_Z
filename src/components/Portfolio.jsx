@@ -18,7 +18,7 @@ const Portfolio = () => {
       {
         id: 2,
         src: meme_generator,
-        demo: "https://master--vocal-choux-76ae84.netlify.app/"
+        demo: "https://master--vocal-choux-76ae84.netlify.app/",
         code: "https://github.com/MontyWilliams/portfolio_Z"
       }
       // {
