@@ -32,8 +32,13 @@ const NavBar = () => {
 
     return (
         <div >
-            <div className="flex justify-between items-center w-full h-20 fixed bg-black text-white">
-                <motion.h1 animate={{}}className="text-5xl  font-signature ml-2 animate-pulse" >Monty W</motion.h1>
+            <div className="flex justify-between  items-center w-full h-20  bg-black text-white">
+                <motion.h1
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 3 }}
+                    className="text-5xl  font-signature ml-2 animate-pulse">Monty W
+                </motion.h1>
 
                 <ul className="hidden md:flex">
                     {links.map(link => (
