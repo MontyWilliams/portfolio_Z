@@ -1,6 +1,7 @@
 import React, { useState }from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const NavBar = () => {
 
@@ -32,7 +33,7 @@ const NavBar = () => {
     return (
         <div >
             <div className="flex justify-between items-center w-full h-20 fixed bg-black text-white">
-                <h1 className="text-5xl  font-signature ml-2 animate-pulse" >Monty W</h1>
+                <motion.h1 animate={{}}className="text-5xl  font-signature ml-2 animate-pulse" >Monty W</motion.h1>
 
                 <ul className="hidden md:flex">
                     {links.map(link => (
