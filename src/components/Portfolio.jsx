@@ -3,6 +3,7 @@ import installNode from "../assets/portfolio/installNode.jpg";
 import navbar from "../assets/portfolio/navbar.jpg";
 import reactParallax from "../assets/portfolio/reactParallax.jpg";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
+import chatAiImg from "../assets/portfolio/chatAiImg.png";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import react_travel_journal from "../assets/portfolio/react_travel_journal.png";
 import meme_generator from "../assets/portfolio/meme_generator.png";
@@ -19,12 +20,14 @@ const Portfolio = () => {
         id: 2,
         src: meme_generator,
         demo: "https://master--vocal-choux-76ae84.netlify.app/",
-        code: "https://github.com/MontyWilliams/portfolio_Z"
-      }
-      // {
-      //   id: 3,
-      //   src: navbar,
-      // },
+        code: "https://github.com/MontyWilliams/meme_generator"
+      },
+      {
+        id: 3,
+        src: chatAiImg,
+        demo: "https://dashing-moxie-09704e.netlify.app/",
+        code: "https://github.com/MontyWilliams/Js_ai_chatGP"
+      },
       // {
       //   id: 4,
       //   src: reactSmooth,
@@ -44,7 +47,7 @@ const Portfolio = () => {
         name="portfolio"
         className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
       >
-        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full ">
+        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 border-gray-500">
               Portfolio
