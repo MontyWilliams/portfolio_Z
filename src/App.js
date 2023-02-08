@@ -7,11 +7,15 @@ import Portfolio from './components/Portfolio.jsx'
 import Experience from './components/Experience.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import { motion } from 'framer-motion'
 
 
 function App() {
   return (
-    <div>
+    <motion.div
+      initial={{ y: -240 }}
+      animate={{ y: 0 }}
+    >
       <NavBar />
       <Home />
       <SocialLinks />
@@ -20,7 +24,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

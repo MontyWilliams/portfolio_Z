@@ -2,6 +2,7 @@ import React from 'react'
 import HeroImage from '../assets/heroimage.jpg'
 import {MdKeyboardArrowRight} from 'react-icons/md'
 import { Link } from 'react-scroll'
+import { motion } from 'framer-motion'
 
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
                 </span>
             </Link>
         <div>
-            <img src={HeroImage} className="rounded-2xl hover:rounded-full duration-[4000ms] ease-in-out mx-auto w-2/3 md:w-full"alt="" />
+            <motion.img initial={{opacity: 0}} animate={{ opacity: 1}} src={HeroImage} className="rounded-2xl hover:rounded-full duration-[4000ms] ease-in-out mx-auto w-2/3 md:w-full"alt="" />
         </div>
         </div>
 
