@@ -7,6 +7,7 @@ import chatAiImg from "../assets/portfolio/chatAiImg.png";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import react_travel_journal from "../assets/portfolio/react_travel_journal.png";
 import meme_generator from "../assets/portfolio/meme_generator.png";
+import { motion } from 'framer-motion'
 
 const Portfolio = () => {
     const portfolios = [
@@ -43,11 +44,15 @@ const Portfolio = () => {
     ];
   
     return (
-      <div
+      <div 
         name="portfolio"
         className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
       >
-        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <motion.div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full"
+          initial={{ x: -600 }}
+          animate={{ x: 0}}
+          transition={{ duration: 3 }}          
+        >
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 border-gray-500">
               Portfolio
@@ -55,9 +60,13 @@ const Portfolio = () => {
             <p className="py-6">Check out some of my work right here</p>
           </div>
   
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+          <div  className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
+          >
             {portfolios.map(({ id, src, demo, code }) => (
-              <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+              <div
+                key={id}
+                className="shadow-md shadow-gray-600 rounded-lg"
+                >
                 <img
                   src={src}
                   alt=""
@@ -73,8 +82,8 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+          </div >
+        </motion.div>
       </div>
     );
   };

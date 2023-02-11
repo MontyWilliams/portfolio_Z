@@ -1,10 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
     <div name="about" className="w-full bg-gradient-to-t  from-gray-400">
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-            <div className="pb-8">
+            <motion.div
+              initial={{x: 800}}
+              animate={{x: 0}}
+              transition={{duration: 2.4}}
+              className="pb-8">
                 <p className="text-4xl font-bold inline border-b-4 ">About</p>
 
                 <p className="text-xl">For the majority of life I built with my hands and when I looked at technology,
@@ -23,7 +28,7 @@ const About = () => {
                      As a full stack web developer I intend to act as I always have. As the builder who takes his part, playing
                       his position and making the long term vision mature and manifest, Technology is always extraordinary, 
                       fascinating,  exciting, forever innovating and improving, but I'm still just a builder doing what I like to do.</p>
-            </div>
+            </motion.div>
         </div>
     </div>
   )

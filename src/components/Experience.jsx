@@ -4,6 +4,7 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
+import {motion} from 'framer-motion'
 import nextjs from "../assets/nextjs.png";
 import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
@@ -74,17 +75,21 @@ const Experience = () => {
           <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0 animate-pulse">
-          {techs.map((techs ) => (
-            <div
-              key={techs.id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${techs.style}`}
-            >
-              <img src={techs.src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{techs.title}</p>
-            </div>
-          ))}
-        </div>
+        <motion.div
+          initial={{x: 800}}
+          animate={{x: 0}}
+          transition={{duration: 2.4}}
+          className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0 animate-pulse">
+            {techs.map((techs ) => (
+              <div
+                key={techs.id}
+                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${techs.style}`}
+              >
+                <img src={techs.src} alt="" className="w-20 mx-auto" />
+                <p className="mt-4">{techs.title}</p>
+              </div>
+            ))}
+        </motion.div>
       </div>
     </div>
   );
