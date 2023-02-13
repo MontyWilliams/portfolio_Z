@@ -7,24 +7,46 @@ import Portfolio from './components/Portfolio.jsx'
 import Experience from './components/Experience.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 
 
 function App() {
+  const components = [
+  <Home />,
+  <SocialLinks />,
+  <About />,
+  <Portfolio />,
+  <Experience />,
+  <Contact />,
+]
+const { scrollY } = useScroll()
+useMotionValueEvent(scrollY, "change", (latest) => {
+  console.log("Page scroll: ", latest)
+})
+const divVar = {
+  hide: {
+    opacity: 0.43
+    
+  }
+}
   return (
-    <motion.div
-      initial={{ y: -240 }}
-      animate={{ y: 0 }}
-    >
+    <div>
       <NavBar />
-      <Home />
-      <SocialLinks />
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
+      {components.map((comp) => {
+        return (
+        <motion.div
+          className=""
+          variants={divVar}
+          initial="hide"
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 1.1}}       
+        >
+          {comp}
+        </motion.div>
+        )
+      })}
       <Footer />
-    </motion.div>
+    </div>
   );
 }
 

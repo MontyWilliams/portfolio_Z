@@ -2,10 +2,12 @@ import React from 'react'
 import HeroImage from '../assets/heroimage.jpg'
 import {MdKeyboardArrowRight} from 'react-icons/md'
 import { Link } from 'react-scroll'
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 
 
 const Home = () => {
+    const { scrollYProgress } = useScroll();
+    
   return (
     <div name="home" className="w-full bg-gradient-to-b from-black ">
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full p-4 md:flex-row text-white">
