@@ -51,7 +51,6 @@ const Portfolio = () => {
         transition: {
           duration: 3,
           when: "beforeChildren",
-          staggerChildren: 0.3
         }
       }
 
@@ -71,13 +70,16 @@ const Portfolio = () => {
     }
     const proBtnVar = {
       hidden: {
-        opacity: 0
+        opacity: 0,
+        when: "beforeParent"
       },
       visible: {
         opacity: 1,
         transition: {
           delay: 3,
-          duration: 2
+          duration: 2,
+          when: "afterParent"
+
         }
       }
     }
