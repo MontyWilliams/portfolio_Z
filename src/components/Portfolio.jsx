@@ -42,6 +42,45 @@ const Portfolio = () => {
       //   src: reactWeather,
       // },
     ];
+    const profileVar = {
+      hidden: {
+        x: -1400
+      },
+      visible: {
+          x: 0,
+        transition: {
+          duration: 3,
+          when: "beforeChildren",
+          staggerChildren: 0.3
+        }
+      }
+
+    }
+    const profImgVar = {
+      hidden: {
+        x: -1500
+      },
+      visible: {
+        x: 0,
+        transition: {
+          duration: 2,
+          delay: 1.3,
+          when: "beforeChildren"
+        }
+      }
+    }
+    const proBtnVar = {
+      hidden: {
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          delay: 3,
+          duration: 2
+        }
+      }
+    }
   
     return (
       <div 
@@ -49,9 +88,9 @@ const Portfolio = () => {
         className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
       >
         <motion.div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full"
-          initial={{ x: -600 }}
-          animate={{ x: 0}}
-          transition={{ duration: 3 }}          
+          variants={profileVar}
+          initial="hidden"
+          animate="visible"
         >
           <div className="pb-8">
             <p className="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -63,24 +102,36 @@ const Portfolio = () => {
           <div  className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0"
           >
             {portfolios.map(({ id, src, demo, code }) => (
-              <div
+              <motion.div
                 key={id}
                 className="shadow-md shadow-gray-600 rounded-lg"
+                variants={profImgVar}
+                initial="hidden"
+                animate="visible"
+             
                 >
-                <img
+                <motion.img
+                variants={profImgVar}
+                initial="hidden"
+                animate="visible"
                   src={src}
                   alt=""
-                  className="rounded-md duration-200 hover:scale-105"
+                  className="rounded-md duration-200 hover:scale-105 h-[300px] w-[300px]"
                 />
-                <div className="flex items-center justify-center">
+                <motion.div
+                  className="flex items-center justify-center"
+                  variants={proBtnVar}
+                  initial="hidden"
+                  animate="visible"
+                  >
                   <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                     <a href={demo}>Demo</a>
                   </button>
                   <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                     <a href={code}>Code</a>
                   </button>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
           </div >
         </motion.div>
