@@ -32,7 +32,7 @@ const NavBar = () => {
 
     return (
         <div >
-            <div className="flex justify-between  items-center w-full h-20  bg-black text-white">
+            <div className="flex justify-between fixed items-center w-full h-20  bg-black text-white">
                 <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

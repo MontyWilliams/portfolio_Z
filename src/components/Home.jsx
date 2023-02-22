@@ -9,9 +9,9 @@ const Home = () => {
     const { scrollYProgress } = useScroll();
     
   return (
-    <div name="home" className="w-full bg-gradient-to-b from-black ">
-        <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full p-4 md:flex-row text-white">
-            <div className="flex flex-col justify-center h-full">
+    <div name="home" className="w-full bg-gradient-to-b from-black min-h-auto">
+        <div className="max-w-screen-lg  mx-auto flex flex-col items-center justify-center h-full p-4 md:flex-row text-white">
+            <div className="flex flex-col mt-40 justify-center h-full">
                 <h2  className="text-4xl sm:text-7xl font-bold hover:glow">I'm a full Stack Developer</h2>
                 <p>I have years of experience with computers and I have been studying web development since 2020. I regularly use
                     a variety of technologies and tools to build web applications on both ends of the stack and I'm familiar with React, Solidity,

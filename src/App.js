@@ -31,7 +31,10 @@ const divVar = {
 }
   return (
     <div>
-      <NavBar />
+      <div className="absolute w-full h-auto">
+      <NavBar/>
+
+      </div>
       {components.map((comp) => {
         return (
         <motion.div
